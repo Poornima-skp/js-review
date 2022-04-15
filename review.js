@@ -20,14 +20,21 @@
 // =================================================
 
 // 1.) Declare a variable
+//let team = "Awesome";
 
 // 2.) Change the value of this variable
+//team = "Awesome Team";
 
 // 3.) Change the data type of this variable
+//team = 4;
 
 // 4.) Create another variable and the one from above to concatenate
+//let awesomeTeam = "Team of " + team;
+
+//console.log (awesomeTeam)
 
 // 5.) Use any of the variables above or create new ones and print using string interpolation
+//console.log (`Our awesome team is a ${awesomeTeam}`);
 
 // ================ Variable Names =================
 /* 
@@ -44,68 +51,136 @@
 // Look up the following string methods!
 
 // Using charAt(), print the letter i in Sabrina
+//const name1 = 'Sabrina';
+
+// console.log(name1.charAt(4));
 
 // Define Unicode in a comment, and get the Unicode using charCodeAt() of the third character in Teddy
 
-// Using fromCharCode() - make it readable for us :). You'll see!
+//The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
+
+let name2 = 'Teddy'
+//console.log (name2.charCodeAt(2));
+
+//let charCode = name2.charCodeAt(2);
+
+//Using fromCharCode() - make it readable for us :). You'll see!
+
+//let name3 = 'I making it readable - "I Think"!!'
+//console.log(String.fromCharCode(189, 43, 190, 61));
+
+//console.log(String.fromCharCode(charCode));
+/* This method returns a string and not a String object.
+
+//Because fromCharCode() is a static method of String, you always use it as String.fromCharCode(), rather than as a method of a String object you created.*/
 
 // Take your first and last name and concat()
 
+//The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+let firstName = "Poornima";
+let lastName= "Somanathan";
+let fullName = firstName.concat(' ',lastName);
+//console.log(fullName);
+
 // Create a string and make it return true using startsWith()
+//The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.
+//console.log(fullName.startsWith('P'));
+
 
 // Now use any variable with endsWith() and return false
+//The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.
+
+//console.log(fullName.endsWith('an' , 14));
 
 // Finish the following sentence. Use includes() and return true.
-const ozgur = 'Once upon a time Ozgur looked up at the Moon, '
+//The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+const ozgur = 'Once upon a time Ozgur looked up at the Moon,';
+let ozgur1 = ozgur + ' and drank in the beauty of it!';
+//console.log(ozgur1.includes('drank'));
 
 // Help! I'm looking for my cow! Using indexOf() help Josh find his cow. What's the index of cow?
 let joshHadALittleLambOopsCow = "Josh lives in a farm. Josh was overwhelmed with coding. Josh is stressed out. Josh fed the chickens this morning. He watered his plants. He took his cow Betsy on a walk. Josh went home without Betsy. Josh went to bed that night, and realized he went home alone."
 
+//console.log(joshHadALittleLambOopsCow.indexOf('cow'));
+
 // Oh no! The alien doppelgangers are here. Let's use our laserbeam lastIndexOf() to shoot down the last alien named Vanessa in the String Universe.
 
-const vanessa = "I am the Alpha Vanessa. I am the Omega Vanessa. We do not come in peace."
+// const vanessa = "I am the Alpha Vanessa. I am the Omega Vanessa. We do not come in peace."
+
+
+// let storeIndex = vanessa.lastIndexOf('Vanessa');
+// console.log (storeIndex);
+
+// let laserBeam = vanessa.slice(storeIndex, 46);
+// //console.log(vanessa.replace(vanessa.lastIndexOf('Vanessa'), '  '))
+
+// const replaced = vanessa.substring(0, storeIndex) + vanessa.substring(storeIndex + laserBeam.length);
+// console.log(replaced);
 
 // Can we use length for strings? I don't know, you tell me.
 const noWeCantTeo = "but did you try it out though?"
+//console.log(noWeCantTeo.length);
 
 // If only it was this easy to replace() my ex. Totally not joking, LOL. JK
 const replaceGokuWithVegeta = "For my DBZ fans, we all know Goku is the best!"
+//console.log(replaceGokuWithVegeta.replace('Goku' , 'Vegeta'));
 
 // Josh has been forgetful lately. Let's help Josh by using search(), and find their right 'wifey'. 
 const joshIsLookingForWifey = "WIFEY 1, wifey 2, WiFeY 3, Wifey 4"
+//console.log(joshIsLookingForWifey.search('wifey'));
 
 // I guess we can share this pizza sentence. Use slice() to return the other half of pizza.
 const pizzaSentence = "pizza, other half of pizza"
+//console.log(pizzaSentence.slice(7));
 
 // Now using the pizza sentence, return only pizza (before the comma)
+//console.log(pizzaSentence.slice(0, 5))
 
 // Okay, but who decided to go to this expensive restaurant? Yaz, Poornima, and Leshawn decided to split() the bill. Return an array separating Yaz, Poornima, and Leshawn.
 const splitTheBill = "Yaz, Poornima, and Leshawn"
 
+// let arrSplitTheBill = splitTheBill.split(',');
+// console.log(arrSplitTheBill);
+
 // OH NO! The alien invaders from earlier were so against bill splitting so they decided to split() Yaz, Poornima, and Leshawn into pieces. Using splitTheBill, return an array separating all three by characters.
+
+let arrSplitTheBill = splitTheBill.split('');
+//console.log(arrSplitTheBill);
+
 
 // Use this toLowerCase()
 const angry = "LOWER YOUR VOICE DOWN IF YOU AIN'T PAYING MY BILLS."
 // Tuan was angry today. Create a string with words that Tuan would yell out. Now lowercase it, to tell Tuan to chill out. 
+//console.log(angry.toLowerCase());
 
 // toUpperCase()
 const jahlunSaidToPutSomeRespectToHisName = "jahlun"
+//console.log(jahlunSaidToPutSomeRespectToHisName.toUpperCase());
 
 // substring()
 // on the chopping block...
 
 // Returns "ell"
 const basicGreeting = "Hello World"
+//console.log(basicGreeting.substring(1,4));
 
 // Returns "JavaScript"
 const ohReally = "JavaScript Substring"
+//console.log(ohReally.substring(0,10))
 
 // Returns aol.com
 const aslDays = "xXteoWuzHereXx@aol.com"
+let index = aslDays.indexOf('a')
+//console.log(aslDays.substring(index))
 
 // trim()
 // If only I can use this for my love handles...
-// Create a variable with a string value with some extra loving on both sides.
+// Create a variable with a string value with some extra loving on both sides
+
+//let str = "        Come closer!!!! I need some Love :-)         "
+//console.log(str);
+//console.log(str.trim());
 
 // =================================================
 //                     BOOLEAN
@@ -120,13 +195,13 @@ const b = 10;
 const c = 15;
 const d = "Keke"
 
-// console.log(a _ b)
-// console.log(c _ b)
-// console.log(d _ d)
-// console.log(d _ a)
-// console.log(a _ 15)
-// console.log(a _ b _ c)
-// console.log(c _ b _ a _ d)
+// console.log(a < b);
+// console.log(c > b);
+// console.log(d == d);
+// console.log(d != a);
+// console.log(a < 15);
+// console.log(a > b < c);
+// console.log(c > b > a != d);
 
 // =================================================
 //                     LOOPS
@@ -134,11 +209,48 @@ const d = "Keke"
 
 // Ken has a headache today and he said the room has been spinning like crazy. Make Ken's room spin 10 times using FOR LOOP. Make him print a sentence.
 
+
+// for (let i =0; i < 10; i++){
+//    console.log("Spinning Ken's room", i+1);
+// }
+
 // Harry said that was so mean of Teo to do Ken dirty like that. Make Teo's vision spin 20 times FOR LOOP.
+
+// for (let i =0; i < 20; i++){
+//   console.log("Spinning Teo's vision", i+1);
+// }
 
 // But wait! Lisa said, while Teo is spinning 20 times. Let's make him say "I'm sorry". Print I'm sorry 20 times using a WHILE loop.
 
+
+
+// let i=0;
+// while(i <20){
+//   console.log("I'm sorry", i+1);
+//   i++
+
+// }
+
 // For the next three, look for the syntax of FOR IN and FOR OF loop. Very easy to understand syntax, and very clean :) 
+
+// FOR...IN:
+// Syntax:
+// for (variable in object) {
+//   statement
+// }
+
+// FOR...OF:
+// for (variable of iterable) {
+//   statement
+// }
+
+// let world = 'Hello World';
+// for ( d in world){
+
+//   console.log('There is o', d);
+// }
+
+
 
 // To The Left! To The Left! Everything I want in the console to the left. Print thing1, thing2, thing 3 using (FOR IN LOOP)
 const whateverQueenBeySaid = {
@@ -146,16 +258,55 @@ const whateverQueenBeySaid = {
   thing2: 'clotes',
   thing3: 'gaming console'
 }
+//Solution1:
+// for (property in whateverQueenBeySaid){
+//   console.log(property)
+// }
+
+
+//to store a empty str
+// let text = "";
+
+// // to loop thru whateverQueenBeySaid
+// for (let x in whateverQueenBeySaid){
+
+//   // add each property of whateverQueenBeySaid to text str variable.
+//   text += whateverQueenBeySaid[x] + " ";
+// }
+
+// // Print new text with whateverQueenBeySaid properties
+// console.log(text);
+
 
 // Using (FOR IN LOOP), print the indexes of the array.
 const lana = ['l', 'a', 'n', 'a']
 
+// for (property in lana){
+//   console.log(property);
+// }
+
 // USE (FOR OF LOOP)!
 const tia = ['teo', 'the', 'syntax', 'of', 'this', 'is', 'cleaner']
+
+// for (property of tia){
+//   console.log(property);
+// }
 
 // Look into forEach() loop, it accepts a callback aka a function inside a function. 
 // Swathi said don't forget each person. No person left behind! Use forEach() to iterate over the array perscholas. Inside the function, create a variable with the string "PS". Print their name in the console concatenated with the variable. 
 const perscholas = ['Amira', 'Arely', 'Jonathan']
+perscholas.forEach(conCat){
+  console.log()
+
+
+}
+// function conCat(){
+//   let variable = "PS"
+//   for (property of perscholas){
+//        console.log(property + variable);
+//      }
+//   console.log()
+//}
 
 // =================================================
 //                     ARRAYS
