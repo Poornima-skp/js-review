@@ -295,82 +295,157 @@ const tia = ['teo', 'the', 'syntax', 'of', 'this', 'is', 'cleaner']
 // Look into forEach() loop, it accepts a callback aka a function inside a function. 
 // Swathi said don't forget each person. No person left behind! Use forEach() to iterate over the array perscholas. Inside the function, create a variable with the string "PS". Print their name in the console concatenated with the variable. 
 const perscholas = ['Amira', 'Arely', 'Jonathan']
-perscholas.forEach(conCat){
-  console.log()
+// perscholas.forEach(conCat)
 
-
-}
-// function conCat(){
-//   let variable = "PS"
-//   for (property of perscholas){
-//        console.log(property + variable);
-//      }
-//   console.log()
-//}
+// function conCat(x){
+//   console.log('ps '+ x );
+// }
 
 // =================================================
 //                     ARRAYS
 // =================================================
 
 // Look up the following: Make a note of what each one of these methods do
-// push()
+
+// push():
+// The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+
 // pop()
+//The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+
+
 // unshift()
+//The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+
 // shift()
+//The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+
+
 // concat()
+//The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+
 // splice()
+//The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
+
 // slice()
+// The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
 // sort()
+// The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
 // includes()
+// The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+
 // indexOf()
+// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
 // length
+//The length property of an object which is an instance of type Array sets or returns the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
 const fruits = ['apple', 'banana', 'orange']
 
 // Print banana
+//console.log(fruits[1]);
 
 // Let's turn it up a notch. I won't tell you what array methods to use. 
 
 // Join all the elements of the array into a string separated by a space.
+joinElements =fruits.join(' ')
+//console.log(joinElements);
+
 
 // Remove orange
+fruits.pop();
+//console.log(fruits);
 
 // Add strawberry, kiwi, and grapes at the end
+fruits.push('strawberry', 'kiwi', 'grapes');
+//console.log(fruits);
+
 
 // Remove apple
+fruits.shift();
+//console.log(fruits);
+
 
 // Add mango at the beginning of the array
+fruits.unshift('mango');
+//console.log(fruits);
 
 // Add lemon, and grapefruit between mango and banana
+fruits.splice(1,0 , 'lemon', 'grapefruit');
+//console.log(fruits);
 
 // Remove banana and strawberry
+fruits.splice(3,2);
+//console.log(fruits);
 
 // Create a new array called exoticFruits. Add 3 exotic fruits inside of this array. Create a new variable and assign it with the value of concatinating fruits array and exoticFruits array.
+let exoticFruits = ['Dragon Fruit', 'Jack Fruit', 'papaya'];
+let concatFruits = fruits.concat(exoticFruits);
+//console.log(concatFruits);
 
 // Print the last two exotic fruits without altering the newly concatenated array.
+//console.log(concatFruits.slice(concatFruits.length - 2));
+
 
 // Monalissa said she needs help re-organizing her items in alphabetical order.
-const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"]
+//const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"];
+//monalissaIsMessy.sort();
+//console.log(monalissaIsMessy);
+
 
 // Kevin accidentally stepped into the mirror world and needs help reversing his words.
 const mirrorMirrorOnTheWall = ["all", "them", "of", "greatest", "the", "is", "who"]
+mirrorMirrorOnTheWall.reverse();
+//console.log(mirrorMirrorOnTheWall);
+
 
 // ===== HIGHER ORDER METHODS =====
 // Rafael said he''s trying to stop cursing so much, and he wants to start with his text messages. Help him write code to eliminate the badword in his sentences. Must return a string sentence. Must use filter(). :) 
+
 const RafaelNoBadWords = "I am so tired of this badword food. I do not want this badword badword food."
+
+let arrOfNoBaddWords = RafaelNoBadWords.split(' ');
+//console.log(arrOfNoBaddWords);
+let noBadWords = (arrOfNoBaddWords.filter(word =>  word !== 'badword')); let strRafaelNoBadWords= noBadWords.join(" ");
+//console.log(strRafaelNoBadWords);
+
 
 // Man math is hard. Let's make our computer do it for us. Use reduce() to find the total of the numbers in numbersToAddUp
 const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
+//console.log(numbersToAddUp.reduce(function add(x,y){
+//   return x+y;
+// }));
 
 // ===== SPREAD OPERATOR ===== 
 
 // Create a variable and assign a value of a copied array using the spread operator
+//let spreadVariable = ['Hello','World','Good','Morning'];
+//let spreadOperator = [...spreadVariable];
+//console.log(spreadOperator);
+
 
 // Create two arrays with any elements and connect both of them using the spread operator. Save the connected arrays into a new variable.
+const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"];
+let spreadVariable = ['Hello','World','Good','Morning'];
+let connectArray = [...monalissaIsMessy,...spreadVariable];
+// console.log(connectArray);
+
 
 // Using the variable with the newly connected arrays, use spread operator to add something at the end.
+newArray = ['lets','clean']
+//connectArray.push(...newArray);
+//console.log(connectArray);
+
 
 // Using the variable with the newly connected arrays, use spread operator to add something at the beginning.
+// connectArray.unshift(...newArray);
+// console.log(connectArray);
 
 // ===== ACCESS =====
 
@@ -397,18 +472,61 @@ const donutShop =[
 ]
 
 // Anthony wants applecrumble. Print please!
+//console.log(donutShop[1][0][1]);
+
+
 // Tosi wants ihatethis. :) Print!
+// console.log(donutShop[1][0][1]);
+
+// console.log(donutShop[2][0][0][1]);
 
 // =================================================
 //                     IF/ELSE
 // =================================================
 
 // Teo is a person. I would hope so...
-// Check if Teo is a person. If true, print 'Teo is a person!' if not then print 'Teo is not a person!'
+// Check if Teo is a person. If true, print 'Teo is a person!' if not then print 'Teo is not a person!
+
+// let Teo ='person';
+// if (Teo === 'person'){
+//   console.log(`Teo is a ${Teo}!`);
+// }else {
+//   console.log(`Teo is not a ${Teo}!`);
+// }
+
+
+
 // If Teo is a person, check to see if he is a male or a female. If male, print 'You got it right!' if not then print 'Wrong. Teo is going to remove you from the class.'.
+// let Teo ='person';
+// let genderTeo = 'male';
+// if(Teo === 'person' && genderTeo === 'male'){
+//   console.log('You got it right!');
+// } else {
+//   console.log('Wrong. Teo is going to remove you from the class.');
+// }
+
+
 // If male, check to see if Teo is hungry. If Teo is 'hungry' then print 'Let's buy Teo some tacos!'. If Teo is 'not hungry' then print 'He doesn't need to eat.'. Anything else, print 'If Teo is not hungry, am I hungry?'
 
+// let Teo ='person';
+// let genderTeo = 'male';
+// let hungry = false;
+// if(Teo === 'person' && genderTeo === 'male'){
+//   console.log('You got it right!');
+//   if(hungry === true){
+//     console.log("Let's buy Teo some tacos!")
+//   } else {
+//     console.log('If Teo is not hungry, am I hungry?');
+//   }
+// } else {
+//   console.log('Wrong. Teo is going to remove you from the class.');
+// }
+
+
 // Create a if/else ternary to check if Gustavo is the coolest. If coolest, print 'You got that right!', else print 'James wants to argue. He says he's the best!'
+
+// let gustavoCool = true;
+// gustavoCool? console.log('You got that right!') : console.log("James wants to argue. He says he's the best!");
 
 // =================================================
 //                     FUNCTIONS
@@ -418,9 +536,32 @@ const donutShop =[
 
 // Create a function called sayGreeting and PRINT 'Hello, ma'amsir!'
 
+// function sayGreeting(){
+//   console.log("Hello, ma'amsir!");
+// }
+// sayGreeting();
+
+
+
 // Create a function that takes a string as a parameter. PRINT 'This is my (STRING)'. Please replace the (STRING) with the parameter. Don't play with me haha.
 
+// function takeStr(str){
+//   console.log(`This is my ${str}`);
+// }
+// takeStr('Hmmmmmmm');
+
 // Create a function called add that takes in three number parameters. Create 3 variables and assign numerical values to them. Invoke your add() and pass in those three variables as arguments.
+
+// function add(x,y,z){
+//   console.log('The Total is' , x+y+z);
+// }
+// let a1= 5;
+// let b1= 6;
+// let c1= 7;
+
+// add(a1,b1,c1);
+
+
 
 // Create a function called fightClub() that accepts a name parameter.  If the name:
 // 'Teo' RETURN '1st rule: You do not talk about Fight Club.'
@@ -429,11 +570,50 @@ const donutShop =[
 // 'Devin' RETURN '4th rule: Only two guys to a fight.'
 // Anything else, RETURN 'No shirts
 
+
+// function fightClub(name){
+//   if (name === 'Teo'){
+//     return '1st rule: You do not talk about Fight Club.'
+//   } else if(name === 'Manara') {
+//     return '2nd rule: YOU DO NOT TALK ABOUT FIGHT CLUB.'
+//   } else if(name === 'Liv'){
+//     return '3rd rule: If someone yells "Stop!", goes limp, taps out, the fight is over.'
+//   }else if(name === 'Devin'){
+//     return '4th rule: Only two guys to a fight.';
+//   }else {
+//     return 'No Shirts';
+//   }
+// }
+
+// let result = fightClub('Liv')
+// console.log(result);
+
+
+
 // Create a function called hello() that prints 'Hello'. Return an anonymous function inside hello() and have it print 'Goodbye'. Invoke your hello function in some way to see Hello and Goodbye in the console.
+
+// function hello(){
+//   console.log("Hello");
+//   return function anonymous(){
+//     console.log('GoodBye');
+//   }
+// }
+
+// hello()();
+
 
 // Create a function expression with your first name as the variable and then print your first and last name
 
+// function firstName1(a,b){
+//   console.log(`My name is ${a} ${b}.`);
+// }
+// firstName1('Poornima','Somanathan');
+
+
 // Create an arrow function that accepts a number and have it return that number doubled
+ 
+// let doubled = num => num * 2;
+// console.log(doubled(2));
 
 // =================================================
 //                     OBJECTS
@@ -441,12 +621,23 @@ const donutShop =[
 
 // Create an object and call it human. Add a name, age, and location property. Give the properties values.
 
+let human = {
+  namer: 'Poornima',
+  age: 40,
+  location: 'Dallas'
+}
+
 // Access the name using dot notation
+//console.log(human.namer)
 
 // Access the age using square brackets
+//console.log(human['age']);
 
 // Use object destructuring to access location
-
+//let destructuring = human.location;
+const {location} = human;
+location;
+console.log(location);
 // ACCESS Granted
 const bulbasaur = {
   name: 'Bulbasaur',
@@ -465,17 +656,29 @@ const bulbasaur = {
 }
 
 // Print overgrow
+//console.log(bulbasaur.abilities[0]);
+
 
 // Print cut
+//console.log(bulbasaur.moves[2]);
 
 // Print Bulbahhhh!!!!!
+//bulbasaur.sound();
 
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
+bulbasaur.height = 7;
+//console.log(bulbasaur)
 
 // Add a property called order and assign it a value of 1 using the square brackets. (Don't change bulbasaur object manually)
+bulbasaur.property = [1];
+//console.log(bulbasaur)
+
 
 // Print an array that contains every single properties in bulbasaur
+//console.log(Object.getOwnPropertyNames(bulbasaur));
 
 // Print every single properties one by one in the console
+//Object.getOwnPropertyNames(bulbasaur).forEach(property => console.log(property));
 
 // Print an array that contains every single values in bulbasaur
+//console.log(Object.values(bulbasaur));
